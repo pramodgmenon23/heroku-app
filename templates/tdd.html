@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prefix Checking Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+      <div class="jumbotron text-center">
+        <h1>E-IDEA CISCO TDD SCRIPT GENERATE</h1>
+          <div class="text-left">
+              <a href="{{ url_for( 'index') }}"  type="button" class="btn btn-primary btn-lg">Home</a>
+          </div>
+    </div>
+
+            <div class="container">
+                <form class="form-horizontal" action = "/tddpost" method = "post" enctype="multipart/form-data">>
+                    <div class="form-group">
+                      <label><b>TDD Plan:</b></label>
+                      <input type="file" name="tddfile1" class="form-control-file" id="exampleFormControlFile1">
+                        <br />
+                        <label><b>TDD Template:</b></label>
+                    <input type="file" name="tddfile2" class="form-control-file">
+                        <br />
+                    <label><b>OUTPUT file template:</b></label>
+                    <input type="file" name="tddfile3" class="form-control-file">
+                        <br />
+                    </div>
+                    <div class="form-group">
+                        <label><b>FOR :</b></label>
+                      <label class="radio-inline">
+                            <input type="radio" name="optradio" value="PRE-AGG"checked>PRE-AGG
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="optradio" value="IPRAN">IPRAN
+                          </label>
+                    </div>
+                    <br />
+                    <input type = "submit" class="btn btn-success" value="Submit">
+                  </form>
+            </div>
+  </body>
+</html>

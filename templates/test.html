@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prefix Checking Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+      <div class="jumbotron text-center">
+        <h1>PREFIX ADVERTISEMENT & WHITELIST CHECK</h1>
+          <div class="text-left">
+              <a href="{{ url_for( 'index') }}"  type="button" class="btn btn-primary btn-lg">Home</a>
+          </div>
+    </div>
+
+            <div class="container">
+                <form class="form-horizontal" action = "/result" method = "post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label><b>Interim-Plan excel file: </b></label>
+                    <input type="file" name="file1"  class="form-control-file">
+                         <br />
+                    <label><b>SAR-Juniper prefix list:</b></label>
+                    <input type="file" name="file2"  class="form-control-file">
+                         <br />
+                    <label><b>IPRAN-Cisco prefix list:</b></label>
+                    <input type="file" name="file3" class="form-control-file">
+                         <br />
+                    <label><b>OUTPUT file template:</b></label>
+                    <input type="file" name="file4" class="form-control-file">
+                        <br />
+                    <label><b>CORE : </b></label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio" value="IDEA" checked><b>IDEA</b>
+                    </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="optradio" value="VODA"><b>VODA</b>
+                          </label>
+                        <br />
+                         <br />
+                    <input type = "submit" class="btn btn-success" value="Submit">
+                    </div>
+                  </form>
+            </div>
+  </body>
+</html>
